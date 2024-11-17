@@ -1,0 +1,323 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 70px;  /* Adjust this value based on the height of your navbar */
+}
+
+/* Header Section */
+header {
+    position: fixed;  /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3498db;  /* Primary color for the navbar */
+    padding: 10px 0;
+    z-index: 1000;  /* Ensures it stays on top of other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: Adds a subtle shadow */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;  /* Adjust the font size for readability */
+    padding: 10px 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ecf0f1;
+    background-color: #2980b9;  /* Slightly darker blue on hover */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Responsive for Small Screens */
+@media (max-width: 768px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;  /* Smaller font on mobile */
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 80px 20px; /* General padding for each section */
+}
+
+h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Add some space below the header so that the sections don't get hidden */
+header + section {
+    margin-top: 20px;  /* Creates space between navbar and the first section */
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+    section {
+        padding: 100px 20px;  /* More padding on larger screens for a spacious feel */
+    }
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #ecf0f1;
+}
+
+#home h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#home span {
+    color: #3498db;
+}
+
+#home p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Skills Section */
+#skills {
+    padding: 80px 0;
+    background-color: white;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill i {
+    font-size: 40px;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.skill h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #2ecc71;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Project Container */
+.project {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Individual Project Box */
+.project-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px; /* Maximum width for each project box */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content from spilling outside the box */
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Project Image */
+.project-img img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #3498db; /* Border to separate image and text */
+    object-fit: cover; /* Ensures images fill the space neatly */
+    max-height: 300px; /* Optional: Controls the height of the images */
+}
+
+/* Project Details Section */
+.project-details {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.project-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #3498db;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.project-links a:hover {
+    background-color: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    background-color: #ecf0f1;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#contact p{
+    margin-top: 10px;
+}
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Section */
+footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Additional Styling for Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 15px;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
